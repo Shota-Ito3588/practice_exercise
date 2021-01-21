@@ -1,0 +1,77 @@
+■STEP1
+・次のようなハッシュを作成します。
+
+sale_product = {
+    :item_name => "eraser",
+    :unit_price => 100,
+    :quantity => 3,
+    :tax => 0,
+    :total_price => 0
+}
+
+:item_nameは商品名を表します。
+:unit_priceは単価を表します。
+:quantityは販売個数を表します。
+:taxは消費税を表します。
+:total_priceはその商品の販売合計金額(消費税含む）を表します。
+
+
+・消費税を計算し、:taxに代入しましょう。
+消費税の計算方法は「単価*個数*0.1」とします。
+
+・販売合計金額(消費税含む)を計算し、:total_priceに代入しましょう。
+販売合計金額は「単価*個数+消費税」とします。
+
+・商品名、単価、販売戸数、消費税、販売合計額を出力しましょう。
+
+
+■STEP2
+次のようなハッシュの配列を作成します。
+
+sale_products = [
+    {
+        :item_name => 'eraser',
+        :unit_price => 100,
+        :quantity => 3,
+        :tax => 0,
+        :total_price => 0,
+    },
+    {
+        :item_name => 'pencil',
+        :unit_price => 50,
+        :quantity => 12,
+        :tax => 0,
+        :total_price => 0,
+    },
+    {
+        :item_name => 'ruler',
+        :unit_price => 200,
+        :quantity => 1,
+        :tax => 0,
+        :total_price => 0
+    },
+    {
+        :item_name => 'notebook',
+        :unit_price => 120,
+        :quantity => 5,
+        :tax => 0,
+        :total_price => 0
+    },
+    {
+        :item_name => 'pen',
+        :unit_price => 100,
+        :quantity => 3,
+        :tax => 0,
+        :total_price => 0
+    }
+]
+
+各データの意味はSTEP1と同じです。
+
+・各商品の消費税を計算し、:taxに代入しましょう。
+消費税の計算方法は「単価*個数*0.1」とします。
+
+・各商品の販売合計金額(消費税含む)を計算し、:total_priceに代入しましょう。
+販売合計金額は「単価*個数+消費税」とします。
+
+・すべての商品の合計個数、消費税合計、合計金額を計算して表示しましょう。
