@@ -67,8 +67,8 @@ total_price = 0
 total_quantity = 0
 
 for i in 0..(sale_products.length - 1)
-  sale_products[i][:tax] = sale_products[i][:unit_price] * sale_products[i][:quantity] * 0.1
-  sale_products[i][:total_price] = sale_products[i][:unit_price] * sale_products[i][:quantity] + sale_products[i][:tax]
+  sale_products[i][:tax] = (sale_products[i][:unit_price] * sale_products[i][:quantity] * 0.1).floor
+  sale_products[i][:total_price] = (sale_products[i][:unit_price] * sale_products[i][:quantity] + sale_products[i][:tax]).floor
   total_tax += sale_products[i][:tax]
   total_quantity += sale_products[i][:quantity]
   total_price += sale_products[i][:total_price]

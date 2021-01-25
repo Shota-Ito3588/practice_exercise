@@ -37,6 +37,6 @@ sale_product = {
   :total_price => 0,
 }
 
-sale_product[:tax] = sale_product[:unit_price] * sale_product[:quantity] * 0.1
-sale_product[:total_price] = sale_product[:unit_price] * sale_product[:quantity] + sale_product[:tax]
+sale_product[:tax] = (sale_product[:unit_price] * sale_product[:quantity] * 0.1).floor
+sale_product[:total_price] = (sale_product[:unit_price] * sale_product[:quantity] + sale_product[:tax]).floor
 p sale_product
