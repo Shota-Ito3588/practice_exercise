@@ -1,0 +1,122 @@
+以下のような配列あります。
+
+grades = [
+	{
+        :name => "tanaka",
+        :japanese => 95,
+        :english => 85,
+        :science => 83,
+        :math => 89,
+        :total => 0,
+	},
+	{
+        :name => "saito",
+        :japanese => 75,
+        :english => 72,
+        :science => 68,
+        :math => 63,
+        :total => 0,
+	},
+	{
+        :name => "yoshida",
+        :japanese => 52,
+        :english => 56,
+        :science => 62,
+        :math => 69,
+        :total => 0,
+	},
+	{
+        :name => "suzuki",
+        :japanese => 88,
+        :english => 84,
+        :science => 82,
+        :math => 81,
+        :total => 0
+	}
+]
+
+
+
+■STEP1
+引数として与えられたハッシュの全教科の合計を求める関数(calcTotal)を作成しましょう。
+
+例）
+grades[0][:total] = calcTotal(grades[0])
+と実行するとgrades[0][:total]には「352」が代入される。
+
+
+
+■STEP2
+引数として与えられたハッシュの配列のすべての生徒の[:total]を計算して帰す関数(calcTotalAll)を作成しましょう。
+STEP1で作った関数を利用して作成してください。
+
+例）
+grades = calcTotalAll(grades)
+と実行するとgradesには以下の内容が代入される。
+
+grades = [
+	{
+        :name => "tanaka",
+        :japanese => 95,
+        :english => 85,
+        :science => 83,
+        :math => 89,
+        :total => 352
+	},
+	{
+        :name => "saito",
+        :japanese => 75,
+        :english => 72,
+        :science => 68,
+        :math => 63,
+        :total => 278
+	},
+	{
+        :name => "yoshida",
+        :japanese => 52,
+        :english => 56,
+        :science => 62,
+        :math => 69,
+        :total => 239
+	},
+	{
+        :name => "suzuki",
+        :japanese => 88,
+        :english => 84,
+        :science => 82,
+        :math => 81,
+        :total => 335
+	}
+]
+
+
+■STEP3
+各教科の合計点数を計算する関数(calcTotalSubject)を作成しましょう。
+
+例)
+totalSubject = calcTotalSubject(grades)
+と実行すると
+
+totalSubjectには以下の内容が代入される。
+
+totalSubject = {
+    :japanese => 310,
+    :english => 297,
+    :science => 295,
+    :math => 302
+}
+
+■STEP4
+各教科の平均点数を計算する関数(calcSubjectAverage)を作成しましょう。
+各教科の平均点数は小数点以下切り捨てとする。
+
+例)
+subjectAverage = calcSubjectAverage(grades)
+と実行するとsubjectAverageには以下の内容が代入される。
+
+subjectAverage = {
+    :japanese => 77,
+    :english => 74,
+    :science => 73,
+    :math => 75
+}
