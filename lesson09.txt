@@ -1,0 +1,28 @@
+クラス[Person]を作成します。
+クラス[Person]は以下のメンバ変数を持ちます。
+
+@first_name         // 苗字(文字列)
+@last_name          // 名前(文字列)
+@age                // 年齢(数値)
+@sex                // 性別("男性" or "女性")
+@birth_year         // 誕生年(数値)
+@birth_month        // 誕生月(数値)
+@birth_date         // 誕生日(数値)
+
+■STEP1
+クラスpersonのコンストラクタを作成しましょう。
+コンストラクタは苗字のデータと名前のデータを受け取り。
+メンバ変数@first_nameと@last_nameに代入します。
+
+■STEP2
+メソッドgetFullNameを作成しましょう。
+このメソッドは@first_nameと@last_nameを結合したものを戻り値として返すメソッドです。
+（※@first_nameと@last_nameの間は半角スペースを一つあけましょう。）
+
+■STEP3
+メソッドsetAgeを作成しましょう。
+setAgeは引数として数値を受け取り、受け取った数値を@ageに代入するメソッドです。
+
+■STEP4
+メソッドgetAgeを作成しましょう。
+getAgeは@ageの値を戻り値として返すメソッドです。
