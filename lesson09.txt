@@ -26,3 +26,16 @@ setAgeは引数として数値を受け取り、受け取った数値を@ageに�
 ■STEP4
 メソッドgetAgeを作成しましょう。
 getAgeは@ageの値を戻り値として返すメソッドです。
+
+■STEP5
+メソッドsetBirthDayを作成しましょう。
+setBirthDayは引数として誕生年、誕生月、誕生日を受け取り、
+受け取った値を@birth_year,@birth_month,@birth_dateに代入するメソッドです。
+
+■STEP6
+メソッドcheckAgeを作成しましょう。
+checkAgeは現在の年、月、日を引数として受け取り、
+引数として受け取った年、月、日とメンバ変数の@birth_year,@birth_month,@birth_dateを使用し、
+メンバ変数の@ageに格納されている年齢が正しいかどうかをチェックするメソッドです。
+年齢が正しければtrueを
+年齢が正しくなければfalseを返しましょう。
