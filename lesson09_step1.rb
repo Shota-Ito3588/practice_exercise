@@ -40,6 +40,8 @@
 # 年齢が正しければtrueを
 # 年齢が正しくなければfalseを返しましょう。
 
+require "date"
+
 class Person
   @first_name
   @last_name
@@ -76,29 +78,55 @@ class Person
     return @birth_year, @birth_month, @birth_date
   end
 
-  def checkAge(nowTime)
-    @nowTime = nowTime
+  # checkAgeは現在の年、月、日を引数として受け取り、
+  # 引数として受け取った年、月、日とメンバ変数の@birth_year,@birth_month,@birth_dateを使用し、
+  def checkAge(year, month, date)
+    # 引数として受け取った年、月、日とメンバ変数の@birth_year,@birth_month,@birth_dateを使用し、
+    # メンバ変数の@ageに格納されている年齢が正しいかどうかをチェックするメソッドです。
+    # 年齢が正しければtrueを
+    # 年齢が正しくなければfalseを返しましょう。
+    # 1.checAgeの引数として受け取った年月日を元に年齢を出す
+    #　　　@birth_yearからcheckAgeのyearを引く
+    #　　　@birth_year 1985  @birth_month 8  @birth_date 20
+    #　　　year        1986  month        8  date        19 
+
+    #　　　@birth_year 1985  @birth_month 8  @birth_date 20
+    #　　　year        1986  month        7  date        15 
+
+    #　　　@birth_year 1985  @birth_month 8  @birth_date 20
+    #　　　year        1986  month        9  date        15
+    
+    #　　　@birth_year 1985  @birth_month 8  @birth_date 20
+    #　　　year        1986  month        7  date        30 
+    if year - @birth_year > 0 && month - @birth_month > 0 && date - @birth_date > 0
+       trueAge = year - @birth_year
+    elsif year - @birth_year < 0 && month - @birth_month < 0 && date - @birth_date < 0
+        trueAge = year - @birth_year - 1
+    else
+        trueAge = year - @birth_year
+    end
+    # 2.1の年齢から@ageの値を引き算する
+    # 3.0であればtrue、0でなければfalseを返す
+    trueAge == @age
+    return true
+    elsif trueAge != @age
+     return false 
+
   end
 
-  def getCheckAge()
-    return @nowTime
-  end
-
-  if @nowTime - @age = 0
-    puts true
-  elsif @nowTime - @age != 0
-    puts false
-  end
+  #   if @nowTime - @age = 0
+  #     puts true
+  #   elsif @nowTime - @age != 0
+  #     puts false
+  #   end
 end
 
 person1 = Person.new("tanaka", "kenichi")
 person1.setAge(35)
 person1.setBirthDay(1985, 8, 20)
-person1.nowTime(35)
 p person1.getFullName()
 p person1.getAge()
 p person1.getBirthDay()
-p person1.getCheckAge()
 
 # ■STEP6
 # メソッドcheckAgeを作成しましょう。
