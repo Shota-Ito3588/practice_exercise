@@ -10,22 +10,22 @@
 require "date"
 
 d = Date.today
-i = 0
 
 puts "#{d.year} #{d.month}".center(20)
 
-arr = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
-puts arr.join " "
+week = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
+puts week.join " "
 
-first_day = Date.new(d.year, d.month).wday
-p first_day
-last_day = Date.new(d.year, d.month, -1).day
-p last_day
+first_day = Date.new(d.year, d.month)
+last_day = Date.new(d.year, d.month, -1)
 
 for i in first_day..last_day
   print i.day
   print " "
-  if Date.new(d.year, d.month).wday == 6
+  if i.day <= 9
+    print " "
+  end
+  if i.wday == 6
     puts "\n"
   end
 end
