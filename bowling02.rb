@@ -28,5 +28,10 @@
 
 # 10フレーム目の処理
 
+
+# bowring02.rb 288028X3458213409XX4
+# 受け取ったスコアを1文字づつループ
+
+
 def initialize(point)
 end
