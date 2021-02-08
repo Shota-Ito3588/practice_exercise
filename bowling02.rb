@@ -36,7 +36,6 @@
 
 # 10フレーム目の処理
 
-<<<<<<< HEAD
 score = ARGV[0] # "122345348071903181"
 scores = score.chars
 p scores
@@ -45,11 +44,11 @@ total_score = 0
 # frames = []
 i = 0
 
-if i == "X"
-  scores << 10
-else
-  i.to_i
-end
+# if i == "X"
+#   scores << 10
+# else
+#   i.to_i
+# end
 
 # if frame.count == 2
 #   frames << frame
@@ -58,15 +57,6 @@ end
 
 for i in scores
   total_score += i.to_i
-if i 
-=======
-
-# bowring02.rb 288028X3458213409XX4
-# 受け取ったスコアを1文字づつループ
-
-
-def initialize(point)
->>>>>>> 0a26c9001e0545bf377bdedd2175dc99c6e8374b
 end
 # p frame
 # p frames
