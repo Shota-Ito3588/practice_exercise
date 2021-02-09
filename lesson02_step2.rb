@@ -7,12 +7,12 @@
 # コマンドライン引数から受け取った値は文字列なので、数値に変換しなければif文で処理ができません。
 # 「ruby キャスト」で検索して変換の仕方を調べましょう。
 
-hour = ARGV[0].to_i
+hour = ARGV[0].to_i # hourにコマンドライン引数から入力された値を受け取る
 
-if hour >= 6 && hour <= 11
-  print "Good morning!"
-elsif hour >= 12 && hour <= 18
-  print "Hello!"
-else
-  print "Good evening!"
+if hour >= 6 && hour <= 11 # もしhourが6以上かつhourが11以下の場合
+  print "Good morning!" # "Good morning!"を出力する
+elsif hour >= 12 && hour <= 18 # それ以外でもしhourが12以上かつhourが18以下の場合
+  print "Hello!" # "Hello!"を出力する
+else # そのほかの場合
+  print "Good evening!" # "Good evening!"を出力する
 end
